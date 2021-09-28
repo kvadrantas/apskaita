@@ -1,0 +1,15 @@
+<h1>
+    {{#if tipas}} 
+        "Tipo informacijos redagavimas"
+    {{else}}
+        "Naujas tipas"
+    {{/if}}
+</h1>
+<form action="/tipasSave" method="POST">
+    {{#if tipas}}
+        <input type="hidden" name="id" value="{{tipas.id}}"><br>
+    {{/if}}
+    Pavadinimas: <input type="text" name="pavadinimas" value="{{#if tipas}}{{tipas.pavadinimas}}{{/if}}"><br>
+    <input style="margin: 20px 0" type="submit" value="Save"><br>
+</form>
+<a href="/tipai">Back</a>

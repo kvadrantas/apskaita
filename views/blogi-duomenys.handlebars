@@ -1,0 +1,10 @@
+<h1>Blogi duomenys</h1>
+    <ul>
+        {{#each klaidos}}
+        {{!-- for (const klaida of klaidos) { --}}
+        <li>
+            <p style="margin: 0;">{{this}}</p>
+        </li>
+        {{/each}}
+    </ul>
+<a href="/tipasEditNew{{#if tipas}}/?id={{tipas.id}}{{/if}}">Atgal</a>

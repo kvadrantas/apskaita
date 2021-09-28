@@ -1,0 +1,11 @@
+<h1>Tipų sąrašas</h1>
+<a href = '/tipasEditNew'>Naujas tipas</a>
+<ul>
+  {{#each tipai}}
+  <li>
+    <a href="/tipasEditNew?id={{id}}">{{pavadinimas}}</a>
+    <a href="/tipasDelete?id={{id}}">X</a>
+  </li>
+  {{/each}}
+</ul>
+<a href="/">Pagrindinis</a>
